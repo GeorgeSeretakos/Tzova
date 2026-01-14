@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import PhotoRibbon from "./components/home/PhotoRibon";
 import Footer from "./components/Footer";
 import { LocaleProvider } from "@/lib/locale";
+import {cookies} from "next/headers";
 
 /* ---------------- Fonts ---------------- */
 
@@ -66,13 +67,13 @@ export const metadata = {
 /* ---------------- Layout ---------------- */
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-    // const cookieStore = await cookies();
-    //
-    // const locale = cookieStore.getAll()
-    //     .find((c) => c.name === "locale")?.value ?? "el";
+    const cookieStore = await cookies();
+
+    const locale = cookieStore.getAll()
+        .find((c) => c.name === "locale")?.value ?? "el";
 
     return (
-        <html>
+        <html lang={locale}>
         <body
             className={`
           ${manrope.variable}

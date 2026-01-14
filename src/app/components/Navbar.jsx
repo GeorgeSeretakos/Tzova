@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { usePathname } from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 import { useLocale, useSetLocale } from "@/lib/locale";
 
 const M = {
@@ -31,6 +31,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
   const setLocale = useSetLocale();
@@ -52,6 +53,7 @@ export default function Navbar() {
   function handleSetLocale(nextLocale) {
     if (nextLocale === locale) return;
     setLocale(nextLocale); // CONTEXT ONLY — no cookies, no refresh
+    router.refresh();
   }
 
   return (

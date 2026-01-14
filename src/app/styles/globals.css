@@ -21,10 +21,7 @@
 /* Greek override */
 html[lang="el"] .font-great-vibes {
   font-family: var(--font-greek-fallback);
-  font-style: italic;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   :root {
