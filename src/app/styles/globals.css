@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --background: #EAEAEA;
+  --foreground: #0B0B0C;
+  --font-sans: var(--font-manrope), var(--font-open-sans), var(--font-roboto), ui-serif, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Default (English & Latin) */
+.font-great-vibes {
+  font-family: var(--font-great-vibes);
+}
+
+/* Greek override */
+html[lang="el"] .font-great-vibes {
+  font-family: var(--font-greek-fallback);
+  font-style: italic;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0B0B0C;
+    --foreground: #EAEAEA;
+  }
+}
+
+body {
+  background: #0B0B0C;
+  color: #EAEAEA;
+  font-family: var(--font-sans);
+}
+
+/* Titles */
+h1 {
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug;
+}
+h2 {
+  @apply text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold leading-snug;
+}
+h3 {
+  @apply text-sm sm:text-base md:text-lg lg:text-xl font-semibold;
+}
+h4 {
+  @apply text-sm sm:text-base font-medium;
+}
+
+/* Paragraphs + content links */
+p, .content a {
+  @apply text-xs sm:text-sm md:text-base leading-relaxed;
+}
+
+
+/* Lists */
+ul, ol {
+  @apply list-inside pl-4 text-[0.7rem] sm:text-sm md:text-base leading-relaxed;
+}
+li {
+  @apply mb-1;
+}
+
+.btn {
+  @apply inline-block px-6 py-2 rounded-xl text-white bg-teal-800 hover:bg-teal-700 transition font-bold;
+}
+
+.title-teal {
+  @apply text-3xl font-bold mb-6 text-teal-800;
+}
+
+.title-black {
+  @apply text-3xl font-bold mb-6 text-black;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-gold {
+  @apply inline-block px-3 py-1 rounded-lg text-sm transition
+  text-[#EAEAEA]/80 hover:bg-[#D4AF37] hover:text-black
+  border border-[#D4AF37];
+}
+
+.hero-arrow {
+  @apply absolute top-1/2 -translate-y-1/2 z-10
+  flex items-center justify-center
+  h-10 w-10 md:h-12 md:w-12 rounded-full
+  bg-black/35 hover:bg-black/45
+  border border-[#D4AF37]/60 hover:border-[#D4AF37]
+  text-[#EAEAEA] text-2xl md:text-3xl leading-none
+  cursor-pointer transition
+  focus:outline-none focus:ring-0;
+}
+
+
