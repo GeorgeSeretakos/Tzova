@@ -11,7 +11,7 @@ export async function sendContactForm(formData) {
   const eventType = formData.get("eventType");
   const message = formData.get("message");
 
-  if (!email || !message) {
+  if (!email || !phone) {
     throw new Error("Invalid form submission");
   }
 
