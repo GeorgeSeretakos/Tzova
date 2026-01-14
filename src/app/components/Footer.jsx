@@ -172,6 +172,7 @@ export default function Footer() {
               type="tel"
               name="phone"
               placeholder={T.form.phone}
+              required
               className="w-full rounded-md bg-[#121214] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
             />
           </div>
