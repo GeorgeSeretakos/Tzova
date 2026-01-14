@@ -1,6 +1,7 @@
 "use client";
 
 import { useLocale } from "@/lib/locale";
+import {sendContactForm} from "@/src/app/actions/sendContactForm";
 
 export default function Footer() {
   const locale = useLocale();
@@ -136,12 +137,7 @@ export default function Footer() {
         </div>
 
         {/* Right column: Contact Form */}
-        <form
-          name="contact"
-          method="POST"
-          action="/thank-you"
-          className="space-y-4"
-        >
+        <form action={sendContactForm} className="space-y-4">
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input

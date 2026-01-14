@@ -1,14 +1,14 @@
 "use server";
 
-import { sendContactMail } from "../../../lib/sendContactMail";
+import { sendContactMail } from "@/lib/sendContactMail";
 import { redirect } from "next/navigation";
 
 export async function sendContactForm(formData) {
-  const firstName = formData.get("first_name");
-  const lastName = formData.get("last_name");
+  const firstName = formData.get("firstName");
+  const lastName = formData.get("lastName");
   const email = formData.get("email");
   const phone = formData.get("phone");
-  const eventType = formData.get("event_type");
+  const eventType = formData.get("eventType");
   const message = formData.get("message");
 
   if (!email || !message) {
