@@ -93,7 +93,7 @@ export const categories = {
     },
     {
       slug: "films",
-      title: "Ταινίες",
+      title: "Κινούμενη Εικόνα",
       description:
         "Κινηματογραφική αφήγηση που παραμένει πέρα από το κάδρο — ταινίες υφασμένες με ατμόσφαιρα, συναίσθημα και μνήμη.",
       image: "/images/thumbnails/movies/thimamai.jpg",

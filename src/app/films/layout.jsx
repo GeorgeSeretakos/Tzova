@@ -20,7 +20,7 @@ const M = {
     ],
   },
   el: {
-    title: "Ταινίες",
+    title: "Κινούμενη Εικόνα",
     categories: [
       { slug: "weddings", label: "Γάμοι" },
       { slug: "baptisms", label: "Βαπτίσεις" },

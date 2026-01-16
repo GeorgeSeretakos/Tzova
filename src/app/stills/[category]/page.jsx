@@ -2,8 +2,6 @@ import StillsGrid from "../../components/galleries/StillsGrid";
 import { stillsByCategory } from "../../../../public/data/stills";
 import CategoryNotFound from "../../components/CategoryNotFound";
 
-// REMOVED: generateStaticParams()
-
 export default async function StillsCategoryPage({ params }) {
   try {
     const { category } = await params;

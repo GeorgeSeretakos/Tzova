@@ -76,7 +76,7 @@ export const filmsByCategory = {
       id: "wed-7",
       title: {
         en: "Elia & Maurizio",
-        el: "Έλια & Μαυρίζιο"
+        el: "Έλια & Μαουρίτσιο"
       },
       provider: "youtube",
       url: "https://www.youtube.com/watch?v=RBJSHJeI0So",
@@ -159,7 +159,7 @@ export const filmsByCategory = {
       id: "mov-2",
       title: {
         en: "I remember everything - trailer",
-        el: "Τα θυμάμαι όλα - trailer"
+        el: "Τα Θυμάμαι Όλα"
       },
       provider: "youtube",
       url: "https://youtu.be/vioWBhg3C3U?si=C9nv3zytTNiuaFie",
@@ -184,11 +184,25 @@ export const filmsByCategory = {
     },
     {
       id: "mov-5",
-      title: "01 NANOS VALAORITIS & MARIE WILSON TRAILER",
+      title: {
+        en: "01 trailer - Dimitris Mouzakitis",
+        el: "01 trailer - Δημήτρης Μουζακίτης"
+      },
       provider: "youtube",
       url: "https://www.youtube.com/watch?v=ibdx3x0ozds",
       thumbnail: "/images/thumbnails/movies/01.jpg",
     },
+    {
+      id: "mov-6",
+      title: {
+        en: "Improvisations in parallel mode - Petros Kolotouros",
+        el: "Παράλληλοι Αυτοσχεδιασμοί - Πέτρος Κολοτούρος"
+      },
+      provider: "youtube",
+      url: "https://www.youtube.com/watch?v=IWLBA-nlB2E",
+      thumbnail: "/images/thumbnails/movies/improvisations.png"
+
+    }
   ],
 
   theatre: [
@@ -196,7 +210,7 @@ export const filmsByCategory = {
       id: "the-1",
       title: {
         en: "The Fish’s Gaze - trailer",
-        el: "Το βλέμμα του ψαριού"
+        el: "Το Βλέμμα του Ψαριού"
       },
       provider: "youtube",
       url: "https://youtu.be/mD7OJIzJtkU?si=i6rfxsYR7eQ4FX3V",
@@ -226,7 +240,7 @@ export const filmsByCategory = {
       id: "adv-1",
       title: {
         en: "Motivo Dance School",
-        el: "Σχολή Χορού Motivo"
+        el: "Σχολή χορού Motivo"
       },
       provider: "youtube",
       url: "https://www.youtube.com/watch?v=HvvWdtTdUEY",
@@ -282,8 +296,8 @@ export const filmsByCategory = {
     {
       id: "adv-7",
       title: {
-        en: "IRC 30YEARS ENGLISH",
-        el: "Διεθνείς Σχέσεις Πολιτισμού 30Χρόνια"
+        en: "IRC 30 YEARS ENGLISH",
+        el: "Διεθνείς Σχέσεις Πολιτισμού 30 χρόνια"
       },
       provider: "youtube",
       url: "https://www.youtube.com/watch?v=_fj839Iz9L4",

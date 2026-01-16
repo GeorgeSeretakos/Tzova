@@ -29,5 +29,5 @@ export const stillsByCategory = {
   baptisms:             makeItems("baptisms", 55, "jpg"),
   portraits:            makeItems("portraits", 16, "jpg"),
   "films-and-theatre":  makeItems("films-and-theatre", 24, "jpg"),
-  advertisement:        makeItems("advertisement", 32, "jpg"),
+  advertisement:        makeItems("advertisement", 31, "jpg"),
 } || {};

@@ -21,7 +21,7 @@ const M = {
     ],
   },
   el: {
-    title: "Φωτογραφίες",
+    title: "Στατική Εικόνα",
     categories: [
       { slug: "weddings", label: "Γάμοι" },
       { slug: "baptisms", label: "Βαπτίσεις" },

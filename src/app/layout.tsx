@@ -5,7 +5,7 @@ import {
     Open_Sans,
     Roboto,
     Great_Vibes,
-    Zen_Kurenaido,
+    EB_Garamond,
 } from "next/font/google";
 
 import "./styles/globals.css";
@@ -33,7 +33,7 @@ const greatVibes = Great_Vibes({
     variable: "--font-great-vibes",
 });
 
-const greekFallback = Zen_Kurenaido({
+const greekFallback = EB_Garamond({
     subsets: ["greek", "latin"],
     variable: "--font-greek-fallback",
     weight: ["400"],
