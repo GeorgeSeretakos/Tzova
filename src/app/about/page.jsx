@@ -23,18 +23,17 @@ export default function AboutPage() {
           "Cinematographer & Photographer based in Greece. Documentary-minded visuals for weddings, baptisms, theatre, and real stories.",
         bio: (
           <>
-            Born in Corinth (1984). Studied Photography & Audiovisual Arts in
+            Studied Photography & Audiovisual Arts in
             Athens (ATEI—now University of West Attica) with ERASMUS at the
-            Università degli Studi di Firenze (grad. 2009). Postgraduate studies
-            at the University of the Aegean in{" "}
+            Università degli Studi di Firenze (grad. 2009). I completed my postgraduate studies in {" "}
             <span className="italic">
-              Culture and Documentary Film Production
+              Documentary at the University of the Aegean.
             </span>
             .
           </>
         ),
         playful:
-          "When not shooting, I’m busy being a dog-mom to Carusos.",
+          "When not shooting, I’m busy being a dog-mom to Karuzos.",
         readMore: {
           open: "Hide full story",
           closed: "Read full story",
@@ -70,7 +69,7 @@ export default function AboutPage() {
           },
           {
             title: "Theatre & Events",
-            desc: "Trailers, backstage, and performances with atmosphere.",
+            desc: "Trailers, backstage, and performances.",
             icon: Images,
           },
           {
@@ -132,20 +131,19 @@ export default function AboutPage() {
           "Διευθύντρια Φωτογραφίας & Φωτογράφος με έδρα την Ελλάδα. Προσεγγίζω γάμους, βαπτίσεις, θέατρο και αληθινές ιστορίες, με ματιά ντοκιμαντέρ.",
         bio: (
           <>
-            Γεννήθηκα στην Κόρινθο (1984). Σπούδασα Φωτογραφία &
+            Σπούδασα Φωτογραφία &
             Οπτικοακουστικές Τέχνες στην Αθήνα (ΑΤΕΙ — σημερινό
             Πανεπιστήμιο Δυτικής Αττικής) και συμμετείχα στο πρόγραμμα
             ERASMUS στο Università degli Studi di Firenze (αποφοίτηση
-            2009). Μεταπτυχιακές σπουδές στο Πανεπιστήμιο Αιγαίου στον
-            τομέα της{" "}
+            2009). Ολοκλήρωσα τις (μεταπτυχιακές σπουδές) μου πάνω στο {" "}
             <span className="italic">
-              Πολιτιστικής Διαχείρισης και Παραγωγής Ντοκιμαντέρ
+              Ντοκιμαντερ στο Πανεπιστήμιο Αιγαίου
             </span>
             .
           </>
         ),
         playful:
-          "Όταν δεν βρίσκομαι πίσω από την κάμερα, είμαι απασχολημένη κάνοντας την dog-mom του Carusos.",
+          "Όταν δεν βρίσκομαι πίσω από την κάμερα, είμαι απασχολημένη προσέχοντας τον Καρούζο.",
         readMore: {
           open: "Απόκρυψη πλήρους ιστορίας",
           closed: "Διάβασε ολόκληρη την ιστορία",
@@ -186,7 +184,7 @@ export default function AboutPage() {
           {
             title: "Θέατρο & Εκδηλώσεις",
             desc:
-              "Trailers, backstage και παραστάσεις με ατμόσφαιρα.",
+              "Trailers, backstage και παραστάσεις.",
             icon: Images,
           },
           {

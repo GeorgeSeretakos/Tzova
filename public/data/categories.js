@@ -28,7 +28,7 @@ export const categories = {
       slug: "films-and-theatre",
       title: "Films & Theatre",
       description:
-        "The heartbeat of the stage, alive with passion and atmosphere — fleeting performances captured to live on.",
+        "The pulse of the stage, alive — an invitation and a challenge for the eyes and the soul.",
       image: "/images/films-and-theatre/11.jpg",
       href: "/stills/films-and-theatre",
     },
@@ -44,7 +44,7 @@ export const categories = {
       slug: "films",
       title: "Films",
       description:
-        "Cinematic storytelling that lingers beyond the frame — films woven with atmosphere, feeling, and memory.",
+        "Cinematic storytelling that lingers beyond the frame — films woven with feeling, and memory.",
       image: "/images/thumbnails/movies/thimamai.jpg",
       href: "/films",
     },
@@ -79,7 +79,7 @@ export const categories = {
       slug: "films-and-theatre",
       title: "Κινηματογράφος & Θέατρο",
       description:
-        "Ο παλμός της σκηνής, ζωντανός με πάθος και ατμόσφαιρα — εφήμερες παραστάσεις αποτυπωμένες για να συνεχίσουν να ζουν.",
+        "Ο παλμός της σκηνής, ζωντανός — πρόσκληση και πρόκληση για τα μάτια και την ψυχή.",
       image: "/images/films-and-theatre/11.jpg",
       href: "/stills/films-and-theatre",
     },
@@ -95,7 +95,7 @@ export const categories = {
       slug: "films",
       title: "Κινούμενη Εικόνα",
       description:
-        "Κινηματογραφική αφήγηση που παραμένει πέρα από το κάδρο — ταινίες υφασμένες με ατμόσφαιρα, συναίσθημα και μνήμη.",
+        "Κινηματογραφική αφήγηση που παραμένει πέρα από το κάδρο — ταινίες υφασμένες με συναίσθημα και μνήμη.",
       image: "/images/thumbnails/movies/thimamai.jpg",
       href: "/films",
     },

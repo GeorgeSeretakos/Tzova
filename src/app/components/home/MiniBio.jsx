@@ -10,13 +10,12 @@ export default function MiniBio() {
       title: "About Katerina",
       text: (
         <>
-          Katerina Tzova is a Greece-based photographer and filmmaker crafting
-          intimate stories with cinematic light and presence. Trained in
-          Photography &amp; Audiovisual Arts at PADA Athens (with Erasmus studies
-          in Florence) and holding an MA in Culture &amp; Documentary Film
-          Production from the University of the Aegean, her work spans weddings,
-          baptisms, portraits, theatre and documentaries—including her debut film{" "}
-          <em>APOLIS</em>.
+          Katerina Tzova, a photographer and filmmaker based in Athens, creates
+          stories through light and presence in space. She studied Photography and
+          Audiovisual Arts at the University of West Attica and holds a postgraduate
+          degree in Cultural Management and Documentary Production from the University
+          of the Aegean. Her work spans weddings, baptisms, portraits, theatre, and
+          documentary, including her award-winning film <em>aPolis</em>.
         </>
       ),
       button: "Read full bio",
@@ -26,14 +25,12 @@ export default function MiniBio() {
       title: "Σχετικά με την Κατερίνα",
       text: (
         <>
-          Η Κατερίνα Τζόβα είναι φωτογράφος και δημιουργός ταινιών με έδρα την
-          Ελλάδα, και δημιουργεί οικείες ιστορίες με κινηματογραφικό φως και
-          παρουσία. Σπούδασε Φωτογραφία &amp; Οπτικοακουστικές Τέχνες στο ΠΑΔΑ
-          Αθήνας (με σπουδές Erasmus στη Φλωρεντία) και κατέχει μεταπτυχιακό
-          τίτλο στην Πολιτιστική Διαχείριση &amp; Παραγωγή Ντοκιμαντέρ από το
-          Πανεπιστήμιο Αιγαίου. Το έργο της εκτείνεται σε γάμους, βαπτίσεις,
-          πορτρέτα, θέατρο και ντοκιμαντέρ — συμπεριλαμβανομένης της πρώτης της
-          ταινίας <em>APOLIS</em>.
+          Η Κατερίνα Τζόβα, φωτογράφος και δημιουργός ταινιών με έδρα την Αθήνα,
+          φτιάχνει ιστορίες με το φως και την παρουσία της στο χώρο. Σπούδασε Φωτογραφία
+          & Οπτικοακουστικές Τέχνες στο ΠΑΔΑ και κατέχει μεταπτυχιακό τίτλο στην Πολιτιστική
+          Διαχείριση & Παραγωγή Ντοκιμαντέρ από το Πανεπιστήμιο Αιγαίου. Το έργο της εκτείνεται
+          σε γάμους, βαπτίσεις, πορτρέτα, θέατρο και ντοκιμαντέρ — συμπεριλαμβανομένης της
+          βραβευμένης της ταινίας <em>aPolis</em>.
         </>
       ),
       button: "Διάβασε ολόκληρο το βιογραφικό",

@@ -70,7 +70,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     const cookieStore = await cookies();
 
     const locale = cookieStore.getAll()
-        .find((c) => c.name === "locale")?.value ?? "el";
+        .find((c) => c.name === "locale")?.value ?? "en";
 
     return (
         <html lang={locale}>

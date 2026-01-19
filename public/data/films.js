@@ -66,7 +66,7 @@ export const filmsByCategory = {
       id: "wed-6",
       title: {
         en: "Sofie & Meletis",
-        el: "Σόφη & Μελέτης"
+        el: "Μελέτης & Σοφί"
       },
       provider: "youtube",
       url: "https://www.youtube.com/watch?v=pd9GvbADJN4",
@@ -159,7 +159,7 @@ export const filmsByCategory = {
       id: "mov-2",
       title: {
         en: "I remember everything - trailer",
-        el: "Τα Θυμάμαι Όλα"
+        el: "Τα Θυμάμαι Όλα - trailer"
       },
       provider: "youtube",
       url: "https://youtu.be/vioWBhg3C3U?si=C9nv3zytTNiuaFie",
@@ -195,8 +195,8 @@ export const filmsByCategory = {
     {
       id: "mov-6",
       title: {
-        en: "Improvisations in parallel mode - Petros Kolotouros",
-        el: "Παράλληλοι Αυτοσχεδιασμοί - Πέτρος Κολοτούρος"
+        en: "Improvisations in parallel mode - Petros Kolotouros - trailer",
+        el: "Παράλληλοι Αυτοσχεδιασμοί - Πέτρος Κολοτούρος - trailer"
       },
       provider: "youtube",
       url: "https://www.youtube.com/watch?v=IWLBA-nlB2E",
@@ -218,7 +218,7 @@ export const filmsByCategory = {
     },
     {
       id: "the-2",
-      title: "Άκου Ανθρωπάκο",
+      title: "Άκου Ανθρωπάκο - Δέσποινα Μαρίνα Σαμαρά",
       provider: "youtube",
       url: "https://youtu.be/RsKpYrNs1zY?si=7YJhMo45mYHLn_mU",
       thumbnail: "/images/thumbnails//theatre/akou.jpg",
@@ -226,8 +226,8 @@ export const filmsByCategory = {
     {
       id: "the-3",
       title: {
-        en: "White Rose",
-        el: "Λευκό Ρόδο"
+        en: "White Rose - Despoina Marina Samara",
+        el: "Λευκό Ρόδο - Δέσποινα Μαρίνα Σαμαρά"
       },
       provider: "youtube",
       url: "https://youtu.be/tebfSiAL4X0?si=gpkqr1PubiRg7HFD",
