@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ...staticPages.map((path) => ({
             url: `${BASE_URL}${path}`,
             lastModified: new Date(),
-            changeFrequency: "monthly",
+            changeFrequency: "monthly" as const,
             priority: path === "" ? 1 : 0.7,
         })),
 
@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ...filmCategories.map((category) => ({
             url: `${BASE_URL}/films/${category}`,
             lastModified: new Date(),
-            changeFrequency: "weekly",
+            changeFrequency: "weekly" as const,
             priority: 0.8,
         })),
 
@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ...stillCategories.map((category) => ({
             url: `${BASE_URL}/stills/${category}`,
             lastModified: new Date(),
-            changeFrequency: "weekly",
+            changeFrequency: "weekly" as const,
             priority: 0.8,
         })),
     ];
