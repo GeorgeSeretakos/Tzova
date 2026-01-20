@@ -22,7 +22,7 @@ export default function ContactPage() {
   const T = M[locale];
 
   return (
-    <section className="bg-[#081915] text-[#EAEAEA] pb-12">
+    <section className="bg-[#031526] text-[#EAEAEA] pb-12">
       <AnimatedPageHeader
         title={T.header}
         iconSrc="/icons/contact-us.png"

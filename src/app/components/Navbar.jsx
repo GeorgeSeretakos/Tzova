@@ -60,7 +60,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-500 ${
         scrolled
-          ? "bg-[#081915] border-b border-[#C6A664]/30"
+          ? "bg-[#031526] border-b border-[#C6A664]/30"
           : "bg-transparent"
       }`}
     >
@@ -102,7 +102,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#081915] shadow-md">
+        <div className="md:hidden bg-[#031526] shadow-md">
           <div className="flex flex-col space-y-3 px-6 py-4 font-medium text-[#EAEAEA]">
             <NavItem href="/" label={T.home} />
             <NavItem href="/stills" label={T.stills} />

@@ -2,7 +2,7 @@
 
 :root {
   --background: #EAEAEA;
-  --foreground: #081915;
+  --foreground: #031526;
   --font-sans: var(--font-manrope), var(--font-open-sans), var(--font-roboto), ui-serif, sans-serif;
 }
 
@@ -25,13 +25,13 @@ html[lang="el"] .font-great-vibes {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #081915;
+    --background: #031526;
     --foreground: #EAEAEA;
   }
 }
 
 body {
-  background: #081915;
+  background: #031526;
   color: #EAEAEA;
   font-family: var(--font-sans);
 }

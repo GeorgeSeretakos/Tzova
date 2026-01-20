@@ -39,14 +39,14 @@ export default function FilmsLayout({ children }) {
   const active = pathname.split("/")[2] || "weddings";
 
   return (
-    <section className="min-h-screen bg-[#081915] text-[#EAEAEA]">
+    <section className="min-h-screen bg-[#031526] text-[#EAEAEA]">
       <AnimatedPageHeader
         title={T.title}
         iconSrc="/icons/films.png"
         iconAlt="Delicate hand-drawn sketch"
       />
 
-      <div className="sticky top-0 z-20 bg-[#081915]/95 backdrop-blur border-t border-b border-[#C6A664]/30">
+      <div className="sticky top-0 z-20 bg-[#031526]/95 backdrop-blur border-t border-b border-[#C6A664]/30">
         <nav className="flex justify-center gap-4 md:gap-6 py-3 text-sm">
           {T.categories.map((c) => (
             <Link

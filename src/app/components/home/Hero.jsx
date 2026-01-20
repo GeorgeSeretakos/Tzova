@@ -71,22 +71,9 @@ intervalMs = 6500,
               alt=""
               className="w-full h-full object-cover"
             />
-            {/* stronger black overlay (the "offset") */}
-            <div className="absolute inset-0 bg-black/50"/>
           </div>
         ))}
       </div>
-
-      {/* Centered logo */}
-      {/*<div className="absolute inset-0 flex items-center justify-center">*/}
-      {/*  <img*/}
-      {/*    src={logoSrc}*/}
-      {/*    alt="Katerina Tzova"*/}
-      {/*    width={260}*/}
-      {/*    height={90}*/}
-      {/*    className="w-[44vw] max-w-[260px] min-w-[160px] drop-shadow-[0_8px_24px_rgba(0,0,0,0.6)]"*/}
-      {/*  />*/}
-      {/*</div>*/}
 
 
       {/* Nav arrows */}

@@ -72,7 +72,7 @@ export default function Footer() {
   const T = M[locale];
 
   return (
-    <footer className="bg-[#081915] text-[#EAEAEA] border-t border-[#C6A664]/30 py-12 px-6">
+    <footer className="bg-[#031526] text-[#EAEAEA] border-t border-[#C6A664]/30 py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left column: Logo + Info */}
         <div className="flex flex-col items-center justify-center text-center space-y-4">
@@ -146,7 +146,7 @@ export default function Footer() {
               name="firstName"
               placeholder={T.form.firstName}
               required
-              className="w-full rounded-md bg-[#081915] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
+              className="w-full rounded-md bg-[#031526] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
             />
             <input
               id="lastName"
@@ -154,7 +154,7 @@ export default function Footer() {
               name="lastName"
               placeholder={T.form.lastName}
               required
-              className="w-full rounded-md bg-[#081915] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
+              className="w-full rounded-md bg-[#031526] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
             />
           </div>
 
@@ -165,7 +165,7 @@ export default function Footer() {
               name="email"
               placeholder={T.form.email}
               required
-              className="w-full rounded-md bg-[#081915] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
+              className="w-full rounded-md bg-[#031526] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
             />
             <input
               id="phone"
@@ -173,7 +173,7 @@ export default function Footer() {
               name="phone"
               placeholder={T.form.phone}
               required
-              className="w-full rounded-md bg-[#081915] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
+              className="w-full rounded-md bg-[#031526] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
             />
           </div>
 
@@ -181,7 +181,7 @@ export default function Footer() {
             id="eventType"
             name="eventType"
             required
-            className="w-full rounded-md bg-[#081915] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
+            className="w-full rounded-md bg-[#031526] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
           >
             <option value="">{T.form.eventType}</option>
             {T.form.events.map((e) => (
@@ -194,7 +194,7 @@ export default function Footer() {
             name="message"
             placeholder={T.form.message}
             rows={4}
-            className="w-full rounded-md bg-[#081915] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
+            className="w-full rounded-md bg-[#031526] border border-[#C6A664]/30 px-3 py-2 text-sm focus:border-[#D4AF37] focus:outline-none"
           />
 
           {/* Consent + Submit */}

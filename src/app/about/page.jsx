@@ -243,7 +243,7 @@ export default function AboutPage() {
   const L = M[locale];
 
   return (
-    <section className="min-h-screen bg-[#081915] text-[#EAEAEA]">
+    <section className="min-h-screen bg-[#031526] text-[#EAEAEA]">
       <AnimatedPageHeader
         title={L.header.title}
         iconSrc="/icons/about.png"

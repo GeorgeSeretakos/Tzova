@@ -8,7 +8,7 @@ import MiniBio from "../app/components/home/MiniBio";
 export default function HomePage() {
 
   return (
-    <main className="bg-[#081915] text-[#EAEAEA]">
+    <main className="bg-[#031526] text-[#EAEAEA]">
       <Hero
         images={[
           "/images/weddings/40.jpg",

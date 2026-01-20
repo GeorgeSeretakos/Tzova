@@ -46,7 +46,7 @@ export default function CategoryShowcase() {
 
           {/* Text */}
           <div
-            className={`flex flex-col justify-center items-start p-10 bg-[#081915] ${
+            className={`flex flex-col justify-center items-start p-10 bg-[#031526] ${
               i % 2 === 0 ? "" : "md:order-1"
             }`}
           >
