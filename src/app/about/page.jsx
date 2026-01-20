@@ -42,7 +42,7 @@ export default function AboutPage() {
           <>
             I began with video art and soon turned to documentary. A spark from my
             Constantinopolitan roots—recording family memories—became{" "}
-            <span className="font-medium">APOLIS</span>, my first documentary.
+            <span className="font-medium">aPolis</span>, my first documentary.
             Since 2002 I’ve worked at FOTO VICTOR (Neapoli Exarcheion),
             photographed interiors for a decor magazine, and created trailers
             for theatre. I work as a cinematographer for weddings, baptisms, and
@@ -128,7 +128,7 @@ export default function AboutPage() {
       intro: {
         name: "Κατερίνα Τζόβα",
         tagline:
-          "Διευθύντρια Φωτογραφίας & Φωτογράφος με έδρα την Ελλάδα. Προσεγγίζω γάμους, βαπτίσεις, θέατρο και αληθινές ιστορίες, με ματιά ντοκιμαντέρ.",
+          "Κινηματογραφίστρια & Φωτογράφος με έδρα την Ελλάδα. Προσεγγίζω γάμους, βαπτίσεις, θέατρο και αληθινές ιστορίες, με ματιά ντοκιμαντέρ.",
         bio: (
           <>
             Σπούδασα Φωτογραφία &
@@ -153,7 +153,7 @@ export default function AboutPage() {
             Ξεκίνησα με video art και σύντομα στράφηκα στο ντοκιμαντέρ.
             Ένα έναυσμα από τις Κωνσταντινουπολίτικες ρίζες μου — η
             καταγραφή οικογενειακών αναμνήσεων — οδήγησε στο{" "}
-            <span className="font-medium">APOLIS</span>, το πρώτο μου
+            <span className="font-medium">aPolis</span>, το πρώτο μου
             ντοκιμαντέρ. Από το 2002 έχω εργαστεί στο FOTO VICTOR (Νεάπολη
             Εξαρχείων), έχω φωτογραφίσει εσωτερικούς χώρους για περιοδικό
             διακόσμησης και έχω δημιουργήσει trailers για θεατρικές
@@ -243,7 +243,7 @@ export default function AboutPage() {
   const L = M[locale];
 
   return (
-    <section className="min-h-screen bg-[#0B0B0C] text-[#EAEAEA]">
+    <section className="min-h-screen bg-[#081915] text-[#EAEAEA]">
       <AnimatedPageHeader
         title={L.header.title}
         iconSrc="/icons/about.png"

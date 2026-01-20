@@ -45,7 +45,7 @@ export default function DualEntry({ variant = "boxed", stills, films }) {
         {/* STILLS */}
         <Link
           href="/stills"
-          className="group border border-[#C6A664]/40 rounded-xl p-8 bg-[#121214] hover:border-[#D4AF37] transition"
+          className="group border border-[#C6A664]/40 rounded-xl p-8 bg-[#081915] hover:border-[#D4AF37] transition"
         >
           <h2 className="font-serif">{T.stills.title}</h2>
           <p className="mt-2 text-sm text-[#EAEAEA]/70">
@@ -67,7 +67,7 @@ export default function DualEntry({ variant = "boxed", stills, films }) {
         {/* FILMS */}
         <Link
           href="/films"
-          className="group border border-[#C6A664]/40 rounded-xl p-8 bg-[#121214] hover:border-[#D4AF37] transition"
+          className="group border border-[#C6A664]/40 rounded-xl p-8 bg-[#081915] hover:border-[#D4AF37] transition"
         >
           <h2 className="font-serif">{T.films.title}</h2>
           <p className="mt-2 text-[#EAEAEA]/70">

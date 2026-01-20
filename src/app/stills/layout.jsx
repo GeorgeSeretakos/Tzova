@@ -40,14 +40,14 @@ export default function StillsLayout({ children }) {
   const active = pathname.split("/")[2] || "weddings";
 
   return (
-    <section className="min-h-screen bg-[#0B0B0C] text-[#EAEAEA]">
+    <section className="min-h-screen bg-[#081915] text-[#EAEAEA]">
       <AnimatedPageHeader
         title={T.title}
         iconSrc="/icons/images.png"
         iconAlt="Delicate hand-drawn sketch"
       />
 
-      <div className="sticky top-0 z-20 bg-[#0B0B0C]/95 backdrop-blur border-t border-b border-[#C6A664]/30">
+      <div className="sticky top-0 z-20 bg-[#081915]/95 backdrop-blur border-t border-b border-[#C6A664]/30">
         <nav className="flex flex-wrap justify-center gap-3 md:gap-6 py-3 text-sm">
           {T.categories.map((c) => (
             <Link

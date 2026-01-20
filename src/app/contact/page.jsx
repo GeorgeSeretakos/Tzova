@@ -15,14 +15,14 @@ export default function ContactPage() {
     el: {
       header: "Επικοινωνία",
       heroTitle: "Θα χαρώ να ακούσω την ιστορία σου",
-      subtitle: "Επικοινώνησε μαζί μου και έλα να δημιουργήσουμε παρέα κάτι αναλλοίωτο στο χρόνο",
+      subtitle: "Επικοινώνησε μαζί μου και έλα να δημιουργήσουμε παρέα κάτι αναλλοίωτο στον χρόνο",
     },
   };
 
   const T = M[locale];
 
   return (
-    <section className="bg-[#0B0B0C] text-[#EAEAEA] mb-12">
+    <section className="bg-[#081915] text-[#EAEAEA] pb-12">
       <AnimatedPageHeader
         title={T.header}
         iconSrc="/icons/contact-us.png"
