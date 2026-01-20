@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import PhotoRibbon from "./components/home/PhotoRibon";
 import Footer from "./components/Footer";
 import { LocaleProvider } from "@/lib/locale";
+import type { Metadata } from "next";
 import {cookies} from "next/headers";
 
 /* ---------------- Fonts ---------------- */
@@ -57,12 +58,56 @@ const roboto = Roboto({
 
 /* ---------------- Metadata ---------------- */
 
-export const metadata = {
-    metadataBase: new URL("https://katerinatzova.gr"),
-    title: "Katerina Tzova creative photography & videography",
-    description: "Website for photographer Katerina Tzova",
-    robots: { index: true, follow: true },
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const cookieStore = await cookies();
+
+    const locale =
+        cookieStore.getAll().find((c) => c.name === "locale")?.value ?? "en";
+
+    if (locale === "el") {
+        return {
+            metadataBase: new URL("https://katerinatzova.gr"),
+            title:
+                "Katerina Tzova creative photography & videography",
+            description:
+                "Η Κατερίνα Τζόβα είναι επαγγελματίας φωτογράφος και βιντεογράφος στην Ελλάδα. Δημιουργική φωτογραφία και κινηματογράφηση για projects, events και καλλιτεχνικές παραγωγές.",
+            robots: { index: true, follow: true },
+
+            openGraph: {
+                type: "website",
+                locale: "el_GR",
+                url: "https://katerinatzova.gr",
+                title:
+                    "Κατερίνα Τζόβα – Φωτογράφος & Βιντεογράφος",
+                description:
+                    "Επίσημη ιστοσελίδα της φωτογράφου και βιντεογράφου Κατερίνας Τζόβα.",
+                siteName: "Katerina Tzova",
+            },
+        };
+    }
+
+    // English (default)
+    return {
+        metadataBase: new URL("https://katerinatzova.gr"),
+        title:
+            "Katerina Tzova creative photography & videography",
+        description:
+            "Katerina Tzova is a professional photographer and videographer based in Greece, specializing in creative photography and cinematic video projects.",
+        robots: { index: true, follow: true },
+
+        openGraph: {
+            type: "website",
+            locale: "en_US",
+            url: "https://katerinatzova.gr",
+            title:
+                "Katerina Tzova – Creative Photography & Videography",
+            description:
+                "Official website of photographer and videographer Katerina Tzova.",
+            siteName: "Katerina Tzova",
+        },
+    };
+}
+
 
 /* ---------------- Layout ---------------- */
 
