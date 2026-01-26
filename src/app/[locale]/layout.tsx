@@ -101,8 +101,8 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
 /* ---------------- Layout ---------------- */
 
-export default function RootLayout({ children, params }: any) {
-    const { locale } = params;
+export default async function RootLayout({ children, params }: any) {
+    const { locale } = await params;
 
     return (
         <html lang={locale}>

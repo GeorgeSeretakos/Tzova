@@ -7,7 +7,6 @@ import {categories} from "../../../../public/data/categories";
 export default function CategoryShowcase({ locale }) {
 
   const localizedCategories = categories[locale] ?? categories.en;
-  console.log(localizedCategories);
 
   const M = {
     en: {

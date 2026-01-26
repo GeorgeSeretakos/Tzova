@@ -5,8 +5,6 @@ import CategoryNotFound from "../../..//components/CategoryNotFound";
 export default async function FilmsCategoryPage({ params }) {
   try {
     const { locale, category } = await params;
-    console.log("params: ", params);
-    console.log("category: ", category);
 
     if (!filmsByCategory || !category) {
       return <CategoryNotFound />;
@@ -23,7 +21,6 @@ export default async function FilmsCategoryPage({ params }) {
     );
 
   } catch (error) {
-    console.log("error: ", error);
     return <CategoryNotFound />;
   }
 }

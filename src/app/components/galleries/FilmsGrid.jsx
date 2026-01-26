@@ -11,9 +11,6 @@ function resolveTitle(title, locale) {
 export default function FilmsGrid({ items = [], locale }) {
   const [activeId, setActiveId] = useState(null);
 
-  console.log("Items: ", items);
-  console.log("Locale: ", locale);
-
   const play = (id) => setActiveId(id);
   const stop = () => setActiveId(null);
 
