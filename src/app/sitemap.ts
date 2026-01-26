@@ -1,7 +1,6 @@
 import { MetadataRoute } from "next";
 
 const BASE_URL = "https://katerinatzova.gr";
-
 const locales = ["el", "en"] as const;
 
 /* ---------- Pages ---------- */
@@ -30,15 +29,6 @@ const stillCategories = [
     "advertisement",
 ];
 
-/* ---------- Helpers ---------- */
-
-function withLocales(path: string) {
-    return locales.map((locale) => ({
-        locale,
-        url: `${BASE_URL}/${locale}${path}`,
-    }));
-}
-
 /* ---------- Sitemap ---------- */
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -50,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             locales.map((locale) => ({
                 url: `${BASE_URL}/${locale}${path}`,
                 lastModified: now,
-                changeFrequency: "monthly",
+                changeFrequency: "monthly" as const,
                 priority: path === "" ? 1 : 0.7,
                 alternates: {
                     languages: {
@@ -66,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             locales.map((locale) => ({
                 url: `${BASE_URL}/${locale}/films/${category}`,
                 lastModified: now,
-                changeFrequency: "weekly",
+                changeFrequency: "weekly" as const,
                 priority: 0.8,
                 alternates: {
                     languages: {
@@ -82,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             locales.map((locale) => ({
                 url: `${BASE_URL}/${locale}/stills/${category}`,
                 lastModified: now,
-                changeFrequency: "weekly",
+                changeFrequency: "weekly" as const,
                 priority: 0.8,
                 alternates: {
                     languages: {
