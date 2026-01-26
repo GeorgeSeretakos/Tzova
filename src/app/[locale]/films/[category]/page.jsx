@@ -1,0 +1,31 @@
+import FilmsGrid from "../../../components/galleries/FilmsGrid";
+import { filmsByCategory } from "../../../../../public/data/films";
+import CategoryNotFound from "../../..//components/CategoryNotFound";
+
+export default async function FilmsCategoryPage({ params }) {
+  try {
+    const { locale, category } = await params;
+    console.log("params: ", params);
+    console.log("category: ", category);
+
+    if (!filmsByCategory || !category) {
+      return <CategoryNotFound />;
+    }
+
+    const items = filmsByCategory[category];
+
+    if (!items) return <CategoryNotFound />;
+
+    return (
+      <div className="space-y-6">
+        <FilmsGrid items={items} locale={locale} />
+      </div>
+    );
+
+  } catch (error) {
+    console.log("error: ", error);
+    return <CategoryNotFound />;
+  }
+}
+
+export const dynamicParams = true;

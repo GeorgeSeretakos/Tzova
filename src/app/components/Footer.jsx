@@ -1,11 +1,9 @@
 "use client";
 
-import { useLocale } from "@/lib/locale";
 import {sendContactForm} from "@/src/app/actions/sendContactForm";
+import Link from "next/link";
 
-export default function Footer() {
-  const locale = useLocale();
-
+export default function Footer({ locale }) {
   const M = {
     en: {
       telLabel: "Tel:",
@@ -69,7 +67,8 @@ export default function Footer() {
     },
   };
 
-  const T = M[locale];
+  const T = M[locale] ?? M.en;
+  const safeLocale = locale ?? "en";
 
   return (
     <footer className="bg-[#031526] text-[#EAEAEA] border-t border-[#C6A664]/30 py-12 px-6">
@@ -209,19 +208,16 @@ export default function Footer() {
               />
               <span>
                 {T.form.privacy.prefix}{" "}
-                          <a
-                            href="/privacy-policy"
-                            className="hover:underline text-[#EAEAEA]"
-                          >
+                <Link
+                  href={`/${safeLocale}/privacy-policy`}
+                  className="hover:underline text-[#EAEAEA]"
+                >
                   {T.form.privacy.link}
-                </a>
+                </Link>
               </span>
             </label>
 
-            <button
-              type="submit"
-              className="btn-gold w-full md:w-auto px-6 py-2"
-            >
+            <button type="submit" className="btn-gold w-full md:w-auto px-6 py-2">
               {T.form.submit}
             </button>
           </div>

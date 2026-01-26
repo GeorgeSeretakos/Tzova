@@ -8,13 +8,13 @@ import {
     EB_Garamond,
 } from "next/font/google";
 
-import "./styles/globals.css";
-import Navbar from "./components/Navbar";
-import PhotoRibbon from "./components/home/PhotoRibon";
-import Footer from "./components/Footer";
-import { LocaleProvider } from "@/lib/locale";
+import "../styles/globals.css";
+
+import Navbar from "../components/Navbar";
+import PhotoRibbon from "../components/home/PhotoRibon";
+import Footer from "../components/Footer";
+
 import type { Metadata } from "next";
-import {cookies} from "next/headers";
 
 /* ---------------- Fonts ---------------- */
 
@@ -58,27 +58,21 @@ const roboto = Roboto({
 
 /* ---------------- Metadata ---------------- */
 
-export async function generateMetadata(): Promise<Metadata> {
-    const cookieStore = await cookies();
-
-    const locale =
-        cookieStore.getAll().find((c) => c.name === "locale")?.value ?? "en";
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+    const { locale } = params;
 
     if (locale === "el") {
         return {
             metadataBase: new URL("https://katerinatzova.gr"),
-            title:
-                "Katerina Tzova creative photography & videography",
+            title: "Κατερίνα Τζόβα – Φωτογράφος & Βιντεογράφος",
             description:
                 "Η Κατερίνα Τζόβα είναι επαγγελματίας φωτογράφος και βιντεογράφος στην Ελλάδα. Δημιουργική φωτογραφία και κινηματογράφηση για projects, events και καλλιτεχνικές παραγωγές.",
             robots: { index: true, follow: true },
-
             openGraph: {
                 type: "website",
                 locale: "el_GR",
-                url: "https://katerinatzova.gr",
-                title:
-                    "Κατερίνα Τζόβα – Φωτογράφος & Βιντεογράφος",
+                url: "https://katerinatzova.gr/el",
+                title: "Κατερίνα Τζόβα – Φωτογράφος & Βιντεογράφος",
                 description:
                     "Επίσημη ιστοσελίδα της φωτογράφου και βιντεογράφου Κατερίνας Τζόβα.",
                 siteName: "Katerina Tzova",
@@ -89,18 +83,15 @@ export async function generateMetadata(): Promise<Metadata> {
     // English (default)
     return {
         metadataBase: new URL("https://katerinatzova.gr"),
-        title:
-            "Katerina Tzova creative photography & videography",
+        title: "Katerina Tzova – Creative Photography & Videography",
         description:
             "Katerina Tzova is a professional photographer and videographer based in Greece, specializing in creative photography and cinematic video projects.",
         robots: { index: true, follow: true },
-
         openGraph: {
             type: "website",
             locale: "en_US",
-            url: "https://katerinatzova.gr",
-            title:
-                "Katerina Tzova – Creative Photography & Videography",
+            url: "https://katerinatzova.gr/en",
+            title: "Katerina Tzova – Creative Photography & Videography",
             description:
                 "Official website of photographer and videographer Katerina Tzova.",
             siteName: "Katerina Tzova",
@@ -108,36 +99,30 @@ export async function generateMetadata(): Promise<Metadata> {
     };
 }
 
-
 /* ---------------- Layout ---------------- */
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-    const cookieStore = await cookies();
-
-    const locale = cookieStore.getAll()
-        .find((c) => c.name === "locale")?.value ?? "en";
+export default function RootLayout({ children, params }: any) {
+    const { locale } = params;
 
     return (
         <html lang={locale}>
-        <body
+            <body
             className={`
-          ${manrope.variable}
-          ${openSans.variable}
-          ${roboto.variable}
-          ${geistSans.variable}
-          ${geistMono.variable}
-          ${greatVibes.variable}
-          ${greekFallback.variable}
-          antialiased
-        `}
-        >
-        <LocaleProvider>
-            <Navbar />
+              ${manrope.variable}
+              ${openSans.variable}
+              ${roboto.variable}
+              ${geistSans.variable}
+              ${geistMono.variable}
+              ${greatVibes.variable}
+              ${greekFallback.variable}
+              antialiased
+            `}
+            >
+            <Navbar locale={locale} />
             <main>{children}</main>
             <PhotoRibbon />
-            <Footer />
-        </LocaleProvider>
-        </body>
+            <Footer locale={locale} />
+            </body>
         </html>
     );
 }

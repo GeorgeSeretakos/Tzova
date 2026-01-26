@@ -2,13 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useLocale } from "../../../../lib/locale";
 import {categories} from "../../../../public/data/categories";
 
-export default function CategoryShowcase() {
-  const locale = useLocale();
+export default function CategoryShowcase({ locale }) {
 
-  const localizedCategories = categories[locale];
+  const localizedCategories = categories[locale] ?? categories.en;
+  console.log(localizedCategories);
 
   const M = {
     en: {
@@ -19,13 +18,13 @@ export default function CategoryShowcase() {
     },
   };
 
-  const T = M[locale];
+  const T = M[locale] ?? M.en;
 
   return (
     <div className="flex flex-col">
       {localizedCategories.map((cat, i) => (
         <div
-          key={cat.slug}
+          key={`${locale}-${cat.slug}`} // 4️⃣ Locale-safe key
           className="grid grid-cols-1 md:grid-cols-2 gap-0 min-h-[400px]"
         >
           {/* Image */}
@@ -38,6 +37,7 @@ export default function CategoryShowcase() {
               src={cat.image}
               alt={cat.title}
               fill
+              unoptimized
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
@@ -56,7 +56,7 @@ export default function CategoryShowcase() {
             <p className="text-[#EAEAEA]/80 mb-6 max-w-lg">
               {cat.description}
             </p>
-            <Link href={cat.href} className="btn-gold">
+            <Link href={`/${locale}${cat.href}`} className="btn-gold">
               {T.viewGallery}
             </Link>
           </div>

@@ -1,10 +1,6 @@
-"use client";
-
 import Link from "next/link";
-import { useLocale } from "../../../../lib/locale";
 
-export default function DualEntry({ variant = "boxed", stills, films }) {
-  const locale = useLocale();
+export default function DualEntry({ variant = "boxed", stills, films, locale }) {
 
   const M = {
     en: {
@@ -37,14 +33,15 @@ export default function DualEntry({ variant = "boxed", stills, films }) {
     },
   };
 
-  const T = M[locale];
+  const T = M[locale] ?? M.en;
+  const safeLocale = locale ?? "en";
 
   if (variant === "boxed") {
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* STILLS */}
         <Link
-          href="/stills"
+          href={`/${safeLocale}/stills`}
           className="group border border-[#C6A664]/40 rounded-xl p-8 bg-[#031526] hover:border-[#D4AF37] transition"
         >
           <h2 className="font-serif">{T.stills.title}</h2>
@@ -66,7 +63,7 @@ export default function DualEntry({ variant = "boxed", stills, films }) {
 
         {/* FILMS */}
         <Link
-          href="/films"
+          href={`/${safeLocale}/films`}
           className="group border border-[#C6A664]/40 rounded-xl p-8 bg-[#031526] hover:border-[#D4AF37] transition"
         >
           <h2 className="font-serif">{T.films.title}</h2>
@@ -94,7 +91,7 @@ export default function DualEntry({ variant = "boxed", stills, films }) {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {/* STILLS */}
       <Link
-        href="/stills"
+        href={`/${safeLocale}/stills`}
         className="group border border-[#C6A664]/40 rounded-xl p-0 bg-[#121214] hover:border-[#D4AF37] transition overflow-hidden relative h-72 md:h-80 lg:h-96"
       >
         {stills?.src && (
@@ -115,7 +112,7 @@ export default function DualEntry({ variant = "boxed", stills, films }) {
 
       {/* FILMS */}
       <Link
-        href="/films"
+        href={`/${safeLocale}/films`}
         className="group border border-[#C6A664]/40 rounded-xl p-0 bg-[#121214] hover:border-[#D4AF37] transition overflow-hidden relative h-72 md:h-80 lg:h-96"
       >
         {films?.src && (

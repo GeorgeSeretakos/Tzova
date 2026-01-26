@@ -1,9 +1,7 @@
 "use client";
 
-import { useLocale } from "../../../lib/locale";
-
-export default function PrivacyPolicyPage() {
-  const locale = useLocale();
+export default async function PrivacyPolicyPage({ params }) {
+  const { locale } = await params;
 
   const M = {
     el: {

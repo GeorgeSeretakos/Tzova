@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useLocale } from "../../../../lib/locale";
 
 function resolveTitle(title, locale) {
   if (!title) return null;
@@ -9,10 +8,11 @@ function resolveTitle(title, locale) {
   return title[locale] ?? title.en ?? null;
 }
 
-
-export default function FilmsGrid({ items = [] }) {
-  const locale = useLocale();
+export default function FilmsGrid({ items = [], locale }) {
   const [activeId, setActiveId] = useState(null);
+
+  console.log("Items: ", items);
+  console.log("Locale: ", locale);
 
   const play = (id) => setActiveId(id);
   const stop = () => setActiveId(null);

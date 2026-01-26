@@ -1,9 +1,8 @@
 "use client";
 
-import { useLocale } from "../../../../lib/locale";
+import Link from "next/link";
 
-export default function MiniBio() {
-  const locale = useLocale();
+export default function MiniBio({ locale }) {
 
   const M = {
     en: {
@@ -38,7 +37,8 @@ export default function MiniBio() {
     },
   };
 
-  const T = M[locale];
+  const T = M[locale] ?? M.en;
+  const safeLocale = locale ?? "en";
 
   return (
     <section className="relative text-center md:text-left">
@@ -66,9 +66,13 @@ export default function MiniBio() {
       </p>
 
       <div className="mt-6">
-        <a href="/about" className="btn-gold" aria-label={T.aria}>
+        <Link
+          href={`/${safeLocale}/about`}
+          className="btn-gold"
+          aria-label={T.aria}
+        >
           {T.button}
-        </a>
+        </Link>
       </div>
     </section>
   );

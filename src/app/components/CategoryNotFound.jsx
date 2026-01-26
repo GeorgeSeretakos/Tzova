@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "../../../lib/locale";
+import { useParams } from "next/navigation";
 
 const M = {
   en: "Category not found",
@@ -8,10 +8,12 @@ const M = {
 };
 
 export default function CategoryNotFound() {
-  const locale = useLocale();
+  const { locale } = useParams();
+  const text = M[locale] ?? M.en;
+
   return (
-    <div className="text-center text-[#EAEAEA]/70">
-      {M[locale]}
+    <div className="text-center text-[#EAEAEA]/70 py-12">
+      {text}
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import StillsGrid from "../../components/galleries/StillsGrid";
-import { stillsByCategory } from "../../../../public/data/stills";
-import CategoryNotFound from "../../components/CategoryNotFound";
+import StillsGrid from "../../../components/galleries/StillsGrid";
+import { stillsByCategory } from "../../../../../public/data/stills";
+import CategoryNotFound from "../../../components/CategoryNotFound";
 
 export default async function StillsCategoryPage({ params }) {
   try {
@@ -25,5 +25,4 @@ export default async function StillsCategoryPage({ params }) {
   }
 }
 
-// Add this to handle dynamic params
 export const dynamicParams = true;

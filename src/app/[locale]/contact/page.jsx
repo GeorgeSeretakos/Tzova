@@ -1,10 +1,7 @@
-"use client";
+import AnimatedPageHeader from "../../components/AnimatedPageHeader";
 
-import AnimatedPageHeader from "../components/AnimatedPageHeader";
-import { useLocale } from "../../../lib/locale";
-
-export default function ContactPage() {
-  const locale = useLocale();
+export default async function ContactPage({ params }) {
+  const { locale } = await params;
 
   const M = {
     en: {
@@ -19,7 +16,7 @@ export default function ContactPage() {
     },
   };
 
-  const T = M[locale];
+  const T = M[locale] ?? M.en;
 
   return (
     <section className="bg-[#031526] text-[#EAEAEA] pb-12">

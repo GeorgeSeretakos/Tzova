@@ -1,13 +1,5 @@
-"use client";
-
-export const dynamicParams = true;
-export const dynamic = 'force-dynamic'; // Ensure dynamic rendering
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import AnimatedPageHeader from "../components/AnimatedPageHeader";
-import { useLocale } from "../../../lib/locale";
-
+import AnimatedPageHeader from "../../../components/AnimatedPageHeader";
 
 const M = {
   en: {
@@ -32,12 +24,9 @@ const M = {
   },
 };
 
-export default function StillsLayout({ children }) {
-  const pathname = usePathname();
-  const locale = useLocale();
-  const T = M[locale];
-
-  const active = pathname.split("/")[2] || "weddings";
+export default async function StillsLayout({ children, params }) {
+  const { locale, category } = await params;
+  const T = M[locale] ?? M.en;
 
   return (
     <section className="min-h-screen bg-[#031526] text-[#EAEAEA]">
@@ -52,9 +41,9 @@ export default function StillsLayout({ children }) {
           {T.categories.map((c) => (
             <Link
               key={c.slug}
-              href={`/stills/${c.slug}`}
+              href={`/${locale}/stills/${c.slug}`}
               className={`px-3 py-1 rounded-lg transition ${
-                active === c.slug
+                c.slug === category
                   ? "bg-[#D4AF37] text-black"
                   : "text-[#EAEAEA]/80 hover:text-[#D4AF37]"
               }`}
@@ -65,7 +54,9 @@ export default function StillsLayout({ children }) {
         </nav>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-10">{children}</div>
+      <div className="max-w-7xl mx-auto px-4 py-10">
+        {children}
+      </div>
     </section>
   );
 }
