@@ -3,7 +3,7 @@ import AnimatedPageHeader from "../../../components/AnimatedPageHeader";
 
 const M = {
   en: {
-    title: "Movies",
+    title: "Films",
     categories: [
       { slug: "weddings", label: "Weddings" },
       { slug: "baptisms", label: "Baptisms" },
