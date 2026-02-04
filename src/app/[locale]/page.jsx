@@ -12,7 +12,7 @@ export default async function HomePage({ params }) {
         images={[
           "/images/weddings/40.jpg",
           "/images/baptisms/46.jpg",
-          "/images/advertisement/32.jpg",
+          "/images/advertisement/31.jpg",
           "/images/portraits/7.jpg",
           "/images/films-and-theatre/20.jpg",
           "/images/advertisement/18.jpg",
